@@ -1,0 +1,30 @@
+:root { --ink:#292633; --muted:#6a6573; --purple:#6d2e7a; --line:#e6e2ed; --rose:#a23f58; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }   /* évite que display:flex/grid écrase l'attribut hidden */
+
+body { margin: 0; background: #efe8e3; color: var(--ink);
+       font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.app { max-width: 480px; margin: 0 auto; min-height: 100vh; background: #fdf8f5; padding-bottom: 24px; }
+
+.banner { background: #2e2938; color: #fff; text-align: center; font-size: 12px; font-weight: 700; padding: 8px; }
+header { padding: 18px 16px 6px; }
+header h1 { margin: 0; font-size: 22px; color: var(--purple); }
+header p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px;
+        margin: 14px 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+
+.consent { display: flex; gap: 10px; font-size: 14px; color: var(--muted); }
+.consent input { width: 20px; height: 20px; flex: none; accent-color: var(--purple); }
+
+button { font: inherit; cursor: pointer; }
+.mic { min-height: 56px; border: 0; border-radius: 28px; background: var(--purple); color: #fff; font-weight: 700; }
+.mic.recording { background: var(--rose); }
+.mic:disabled { opacity: .45; cursor: not-allowed; }
+.small { min-height: 44px; border: 0; border-radius: 10px; background: #efedf5; color: var(--purple); font-weight: 700; padding: 0 14px; }
+
+label { font-weight: 700; font-size: 14px; }
+textarea { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; }
+audio { width: 100%; }
+#status { margin: 0; color: var(--muted); font-size: 14px; }
+:focus-visible { outline: 3px solid #b79bd0; outline-offset: 2px; }

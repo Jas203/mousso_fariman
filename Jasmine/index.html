@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mousso Fariman — démonstration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <div class="banner">DÉMO LOCALE · Ne saisis aucun récit réel</div>
+
+    <header>
+      <h1>Mousso Fariman</h1>
+      <p>Espace d’écoute et d’orientation</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <label class="consent">
+          <input type="checkbox" id="consent">
+          <span>J’accepte l’enregistrement audio sur cet appareil. Il reste dans cette page et rien n’est envoyé.</span>
+        </label>
+
+        <button id="record-start" class="mic" type="button" disabled>Enregistrer</button>
+        <button id="record-stop" class="mic recording" type="button" hidden>Arrêter</button>
+
+        <p id="status" role="status">Aucun audio enregistré.</p>
+        <audio id="player" controls hidden></audio>
+        <button id="audio-delete" class="small" type="button" hidden>Effacer l’audio</button>
+      </section>
+
+      <section class="card">
+        <label for="note">Note écrite (fictive uniquement)</label>
+        <textarea id="note" rows="5" placeholder="Écris un exemple fictif ici. Rien n’est sauvegardé."></textarea>
+        <button id="note-clear" class="small" type="button">Effacer la note</button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
